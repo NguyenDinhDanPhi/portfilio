@@ -4,164 +4,534 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nguyen Dinh Dan Phi
-    </title>
+    <title>Nguyen Dinh Dan Phi · iOS Developer</title>
+
+    <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
+
+    <!-- Styles -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <nav class="nav">
-        <a href="" class="logo"> <span class="highlighted"> Dan</span> Phi</a>
+  </head>
+  <body>
+    <!-- Background blobs -->
+    <div class="page-bg"></div>
+
+    <!-- ========= NAVBAR ========= -->
+    <header class="header">
+      <nav class="nav container">
+        <a href="#home" class="logo">
+          <span class="highlighted">Dan</span> Phi
+        </a>
 
         <div class="nav-links">
           <a href="#home" class="nav-item nav-item-active">Home</a>
           <a href="#about" class="nav-item">About</a>
-          <a href="#projects" class="nav-item">projects</a>
-          <a href="#contact" class="nav-item">contact</a>
+          <a href="#skills" class="nav-item">Skills</a>
+          <a href="#projects" class="nav-item">Projects</a>
+          <a href="#contact" class="nav-item">Contact</a>
         </div>
 
-        <div class="toggler">
-          <span class="line"></span><span class="line"></span
-          ><span class="line"></span>
-        </div>
+        <button class="toggler" aria-label="Open navigation">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
       </nav>
-  </head>
-  <body>
+    </header>
 
-        <script src="./js/script.js"></script>
-        <section class="hero container" id="home">
-            <div class="hero-info">
-             <h1 class="title">Nguyen Dinh Dan<span class="highlighted"> Phi</span></h1>
-             <p class="hero-description">IOS developer.</p>
-           </div>
-     
-           <div class="hero-img">
-             <img src="./image/phi.png" alt="Oliver Queen" />
-           </div>
-      </section>
-      <section class="about container" id="about">
-      
-  
-        <div class="about-info">
-          <h2 class="secondery-title">About Me</h2>
-  
-          <p class="description">
-            Hello, my name is Nguyễn Đình Đan Phi, a Mobile Developer with over 1 year of experience in mobile app development. 
-            I specialize in using SwiftUI and UIKit to create smooth and user-friendly applications. 
-            I have experience integrating third-party login methods like Google and Facebook,
-             and I work with the MVVM architecture and popular design patterns such as Singleton, Delegate,...
-              to build scalable and maintainable code. Additionally,
-               I work with RESTful APIs, manage the app release process via 
-               TestFlight and App Store, and use SourceTree for version control, 
-               making it easier to track and manage changes effectively
-          </p>
-  
-          <p class="description">
-            With a passion for technology, my goal is to become a professional developer,
-             always ready to take on new challenges and continuously improve to meet the growing demands of the mobile technology industry.
-          </p>
-  
-  
-          <a href="#" class="btn btn-secondery">More</a>
-        </div>
-      </section>
-  
-       
-          
-        
-      </div>
-      <section class="projects container" id="projects">
-        <div class="projects-header">
-          <h2 class="secondery-title">Projects</h2>
-  
-          
-        </div>
-  
-        <div class="grid projects-grid">
-          <div class="grid-item projects-item all design">
-            <a href="https://apps.apple.com/vn/app/typemaster-b%C3%A0n-ph%C3%ADm-ai/id6470351765?l=vi">
-            <img src="./image/typemaster.jpg " alt="" />
-          </a>
-          </div>
-          <div class="grid-item projects-item unavailable">
-            <img src="./image/5mintub.png" alt="" />
-            <div class="caption">The publisher has discontinued publishing on the App Store.
+    <main>
+      <!-- ========= HERO (REDESIGNED) ========= -->
+      <section class="section hero" id="home">
+        <div class="container hero-inner">
+          <!-- Left: text -->
+          <div class="hero-info" data-animate="fade-left">
+            <p class="hero-kicker">HELLO, I’M</p>
+            <h1 class="title">
+              Nguyen Dinh Dan <span class="highlighted">Phi</span>
+            </h1>
+
+            <p class="hero-role-line">
+              I’m a
+              <span id="typed-role" class="typed-role">Swift Enthusiast</span>
+              <span class="typed-cursor">|</span>
+            </p>
+
+            <p class="hero-description">
+              I build smooth, user-friendly mobile applications using
+              <a href="#skills" class="hero-link">Swift</a>,
+              <a href="#skills" class="hero-link">UIKit</a> &
+              <a href="#skills" class="hero-link">SwiftUI</a>, focusing on clean
+              architecture, performance and App Store–ready quality.
+            </p>
+
+            <div class="hero-chips">
+              <span class="pill-soft">
+                <i class="fa-brands fa-apple"></i> iOS &amp; iPadOS
+              </span>
+              <span class="pill-soft">
+                <i class="fa-solid fa-code"></i> Swift · SwiftUI · UIKit
+              </span>
+              <span class="pill-soft">
+                <i class="fa-solid fa-diagram-project"></i> MVVM · Patterns
+              </span>
+              <span class="pill-soft">
+                <i class="fa-solid fa-cloud-arrow-up"></i> REST · App Store
+              </span>
             </div>
-          </div>
-          <div class="grid-item projects-item unavailable">
-            <img src="./image/artmingle.jpg" alt="" />
-            <div class="caption">The publisher has discontinued publishing on the App Store.
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <i class="fa-solid fa-code"></i>
+                View iOS Projects
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                <i class="fa-solid fa-paper-plane"></i>
+                Contact Me
+              </a>
             </div>
-          </div>
-          <div class="grid-item projects-item unavailable">
-            <img src="./image/2comic.jpg" alt="" />
-            <div class="caption">The publisher has discontinued publishing on the App Store.
-            </div>
-          </div>
-          
-        </div>
-      </section>
-      <section class="container contact" id="contact">
-        <div class="contact-info">
-          <h2 class="secondery-title">Contact</h2>
-          <div class="info-container">
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <i class="fa-solid fa-location-dot"></i>
+
+            <div class="hero-meta">
+              <div class="hero-meta-item">
+                <span class="meta-label">Experience</span>
+                <span class="meta-value">1+ year</span>
               </div>
-              <div class="contact-info-data">
-                <h3>Address</h3>
-                <p>Go Vap, Ho Chi Minh City</p>
+              <div class="hero-meta-item">
+                <span class="meta-label">Focus</span>
+                <span class="meta-value">Swift · iOS</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="meta-label">Stack</span>
+                <span class="meta-value">UIKit · SwiftUI · MVVM</span>
               </div>
             </div>
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <div class="contact-info-data">
-                <h3>Email</h3>
-                <p>phittnh@gmail.com</p>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <i class="fa-solid fa-phone-volume"></i>
-              </div>
-              <div class="contact-info-data">
-                <h3>Phone</h3>
-                <p>0862024701</p>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
+
+            <div class="hero-socials">
+              <a
+                href="https://github.com/NguyenDinhDanPhi"
+                target="_blank"
+                aria-label="GitHub"
+              >
                 <i class="fa-brands fa-github"></i>
-              </div>
-              <div class="contact-info-data">
-                <h3>GitHub</h3>
-                <p><a href="https://github.com/NguyenDinhDanPhi" target="_blank">github.com/DanPhi</a></p>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/nguyen-dinh-dan-phi-95a1b9267/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="mailto:phittnh@gmail.com" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: device + avatar -->
+          <div class="hero-visual" data-animate="fade-right">
+            <div class="hero-device-wrapper">
+              <div class="hero-device-shadow"></div>
+              <div class="hero-device">
+                <div class="hero-device-notch"></div>
+                <div class="hero-device-screen">
+                  <img
+                    src="./image/typemaster.jpg"
+                    alt="Typemaster – Bàn phím AI"
+                  />
+                  <div class="hero-device-overlay">
+                    <span class="device-label">Featured iOS App</span>
+                    <span class="device-title">Typemaster – Bàn phím AI</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <i class="fa-brands fa-linkedin"></i>
+
+            <div class="hero-avatar" data-animate="float">
+              <div class="hero-avatar-orbit"></div>
+              <div class="hero-avatar-border">
+                <img src="./image/phi.png" alt="Nguyen Dinh Dan Phi" />
               </div>
-              <div class="contact-info-data">
-                <h3>LinkedIn</h3>
-                <p><a href="https://www.linkedin.com/in/nguyen-dinh-dan-phi-95a1b9267/" target="_blank">linkedin.com/in/NguyenDinhDanPhi</a></p>
+              <div class="hero-avatar-badge">
+                <span class="badge-dot"></span>
+                <span class="badge-text">
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                  iOS Developer
+                </span>
               </div>
             </div>
           </div>
         </div>
       </section>
-      
-  
-          <footer class="footer">
-      </footer>  
-        
+
+      <!-- ========= ABOUT ========= -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
+            <h2 class="secondary-title">About Me</h2>
+            <p class="section-subtitle">
+              A mobile developer focused on delivering high-quality iOS apps.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <article class="about-card" data-animate="fade-left">
+              <p class="description">
+                Hello, my name is <strong>Nguyễn Đình Đan Phi</strong>, a Mobile
+                Developer with over <strong>1 year of experience</strong> in
+                mobile app development. I specialize in using
+                <strong>SwiftUI</strong> and <strong>UIKit</strong> to create
+                smooth and user-friendly applications.
+              </p>
+
+              <p class="description">
+                I have experience integrating third-party login methods like
+                <strong>Google</strong> and <strong>Facebook</strong>, and I
+                work with the <strong>MVVM</strong> architecture and popular
+                design patterns such as <strong>Singleton</strong>,
+                <strong>Delegate</strong>, ... to build scalable and
+                maintainable code.
+              </p>
+
+              <p class="description">
+                Additionally, I work with <strong>RESTful APIs</strong>, manage
+                the app release process via <strong>TestFlight</strong> and
+                <strong>App Store</strong>, and use <strong>SourceTree</strong>
+                for version control, making it easier to track and manage
+                changes effectively.
+              </p>
+
+              <p class="description">
+                With a passion for technology, my goal is to become a
+                <strong>professional iOS developer</strong>, always ready to
+                take on new challenges and continuously improve to meet the
+                growing demands of the mobile technology industry.
+              </p>
+            </article>
+
+            <aside class="about-card about-card--side" data-animate="fade-right">
+              <h3 class="about-side-title">Tooling &amp; Workflow</h3>
+              <ul class="skills-list">
+                <li>Swift, SwiftUI, UIKit</li>
+                <li>MVVM, Coordinator, Delegate, Singleton</li>
+                <li>RESTful APIs, JSON</li>
+                <li>Git &amp; SourceTree</li>
+                <li>Xcode, TestFlight, App Store Connect</li>
+              </ul>
+
+              <div class="about-side-pills">
+                <span class="pill">
+                  <i class="fa-solid fa-bug-slash"></i> Debug &amp; profiling
+                </span>
+                <span class="pill">
+                  <i class="fa-solid fa-arrows-rotate"></i> Iterative delivery
+                </span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= CORE IOS SKILLS ========= -->
+      <section class="section section-alt" id="skills">
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
+            <h2 class="secondary-title">Core iOS Skills</h2>
+            <p class="section-subtitle">
+              What I bring to an iOS / mobile team.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card" data-animate="fade-up">
+              <div class="skill-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3>Languages &amp; UI</h3>
+              <ul>
+                <li>Swift as primary language</li>
+                <li>UIKit &amp; Auto Layout</li>
+                <li>SwiftUI for modern UIs</li>
+                <li>Reusable components</li>
+              </ul>
+            </article>
+
+            <article class="skill-card" data-animate="fade-up">
+              <div class="skill-icon">
+                <i class="fa-solid fa-diagram-project"></i>
+              </div>
+              <h3>Architecture</h3>
+              <ul>
+                <li>MVVM for clear separation</li>
+                <li>Coordinator / flow handling</li>
+                <li>Delegate, Singleton patterns</li>
+                <li>Maintainable code structure</li>
+              </ul>
+            </article>
+
+            <article class="skill-card" data-animate="fade-up">
+              <div class="skill-icon">
+                <i class="fa-solid fa-cloud"></i>
+              </div>
+              <h3>Networking</h3>
+              <ul>
+                <li>RESTful API integration</li>
+                <li>JSON parsing &amp; models</li>
+                <li>Error handling &amp; states</li>
+                <li>Secure communication basics</li>
+              </ul>
+            </article>
+
+            <article class="skill-card" data-animate="fade-up">
+              <div class="skill-icon">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+              <h3>Release &amp; Lifecycle</h3>
+              <ul>
+                <li>App Store &amp; TestFlight</li>
+                <li>Build &amp; archive in Xcode</li>
+                <li>Crash &amp; bug tracking</li>
+                <li>Iterating with user feedback</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= PROJECTS ========= -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
+            <h2 class="secondary-title">Projects</h2>
+            <p class="section-subtitle">
+              Some of the apps I’ve worked on and published.
+            </p>
+          </div>
+
+          <div class="projects-tabs" data-animate="fade-up">
+            <button
+              class="projects-tab-btn projects-tab-btn-active"
+              id="all"
+            >
+              All
+            </button>
+            <button class="projects-tab-btn" id="available">Available</button>
+            <button class="projects-tab-btn" id="unavailable">
+              Discontinued
+            </button>
+          </div>
+
+          <div class="grid projects-grid">
+            <!-- Typemaster - Available -->
+            <div
+              class="grid-item projects-item all available"
+              data-animate="fade-up"
+            >
+              <article class="project-card">
+                <div class="project-thumb">
+                  <a
+                    href="https://apps.apple.com/vn/app/typemaster-b%C3%A0n-ph%C3%ADm-ai/id6470351765?l=vi"
+                    target="_blank"
+                  >
+                    <img src="./image/typemaster.jpg" alt="Typemaster" />
+                  </a>
+                  <span class="badge badge-live">
+                    <i class="fa-solid fa-circle"></i>
+                    Live on App Store
+                  </span>
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title">Typemaster – Bàn phím AI</h3>
+                  <p class="project-description">
+                    Intelligent Vietnamese keyboard powered by AI, focusing on
+                    speed and personalization.
+                  </p>
+                  <p class="project-tech">Swift · UIKit · iOS · App Store</p>
+                  <a
+                    href="https://apps.apple.com/vn/app/typemaster-b%C3%A0n-ph%C3%ADm-ai/id6470351765?l=vi"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    View on App Store
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <!-- 5minTub - Discontinued -->
+            <div
+              class="grid-item projects-item all unavailable"
+              data-animate="fade-up"
+            >
+              <article class="project-card project-card--dimmed">
+                <div class="project-thumb">
+                  <img src="./image/5mintub.png" alt="5minTub" />
+                  <span class="badge badge-discontinued">Discontinued</span>
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title">5minTub</h3>
+                  <p class="project-description">
+                    Short-form content app focused on quick video experiences.
+                  </p>
+                  <p class="project-tech">Swift · UIKit</p>
+                  <p class="project-note">
+                    The publisher has discontinued publishing on the App Store.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Artmingle - Discontinued -->
+            <div
+              class="grid-item projects-item all unavailable"
+              data-animate="fade-up"
+            >
+              <article class="project-card project-card--dimmed">
+                <div class="project-thumb">
+                  <img src="./image/artmingle.jpg" alt="Artmingle" />
+                  <span class="badge badge-discontinued">Discontinued</span>
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title">Artmingle</h3>
+                  <p class="project-description">
+                    An app for exploring and managing digital art collections.
+                  </p>
+                  <p class="project-tech">Swift · UIKit · Image Handling</p>
+                  <p class="project-note">
+                    The publisher has discontinued publishing on the App Store.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <!-- 2Comic - Discontinued -->
+            <div
+              class="grid-item projects-item all unavailable"
+              data-animate="fade-up"
+            >
+              <article class="project-card project-card--dimmed">
+                <div class="project-thumb">
+                  <img src="./image/2comic.jpg" alt="2Comic" />
+                  <span class="badge badge-discontinued">Discontinued</span>
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title">2Comic</h3>
+                  <p class="project-description">
+                    Comic reader app with a focus on a smooth reading
+                    experience.
+                  </p>
+                  <p class="project-tech">Swift · UIKit</p>
+                  <p class="project-note">
+                    The publisher has discontinued publishing on the App Store.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= CONTACT ========= -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
+            <h2 class="secondary-title">Contact</h2>
+            <p class="section-subtitle">
+              Feel free to reach out for work, collaboration, or just say hi.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-info" data-animate="fade-left">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-info-data">
+                  <h3>Address</h3>
+                  <p>Go Vap, Ho Chi Minh City</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact-info-data">
+                  <h3>Email</h3>
+                  <p><a href="mailto:phittnh@gmail.com">phittnh@gmail.com</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <div class="contact-info-data">
+                  <h3>Phone</h3>
+                  <p><a href="tel:+84862024701">0862 024 701</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="contact-info-data">
+                  <h3>GitHub</h3>
+                  <p>
+                    <a
+                      href="https://github.com/NguyenDinhDanPhi"
+                      target="_blank"
+                      >github.com/NguyenDinhDanPhi</a
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="contact-info-data">
+                  <h3>LinkedIn</h3>
+                  <p>
+                    <a
+                      href="https://www.linkedin.com/in/nguyen-dinh-dan-phi-95a1b9267/"
+                      target="_blank"
+                      >linkedin.com/in/NguyenDinhDanPhi</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-card" data-animate="fade-right">
+              <h3>Let’s build something together</h3>
+              <p>
+                The fastest way to reach me is via email or LinkedIn. I’m open
+                to freelance work, collaboration, or full-time opportunities
+                related to iOS development and mobile engineering.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 Nguyen Dinh Dan Phi. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/script.js"></script>
   </body>
 </html>
