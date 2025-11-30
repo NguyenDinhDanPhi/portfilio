@@ -1,9 +1,9 @@
-// ====== MOBILE NAV TOGGLER ======
+// ====== NAV TOGGLER ======
 const toggler = document.querySelector(".toggler");
 const navLinks = document.querySelector(".nav-links");
 const navItems = document.querySelectorAll(".nav-item");
 
-if (toggler) {
+if (toggler && navLinks) {
   toggler.addEventListener("click", () => {
     navLinks.classList.toggle("nav-active");
   });
@@ -13,7 +13,9 @@ navItems.forEach((item) => {
   item.addEventListener("click", function () {
     navItems.forEach((i) => i.classList.remove("nav-item-active"));
     this.classList.add("nav-item-active");
-    navLinks.classList.remove("nav-active");
+    if (window.innerWidth < 800 && navLinks) {
+      navLinks.classList.remove("nav-active");
+    }
   });
 });
 
@@ -50,7 +52,7 @@ window.addEventListener("scroll", () => {
 
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 140;
+    const sectionTop = current.offsetTop - 150;
     const sectionId = current.getAttribute("id");
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -91,7 +93,7 @@ if ("IntersectionObserver" in window) {
   animatedEls.forEach((el) => el.classList.add("in-view"));
 }
 
-// ====== TYPEWRITER FOR ROLE ======
+// ====== TYPEWRITER ROLE ======
 const typedEl = document.getElementById("typed-role");
 
 if (typedEl) {

@@ -11,13 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
     <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
-
     <!-- Styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -25,151 +23,261 @@
     <!-- Background blobs -->
     <div class="page-bg"></div>
 
-    <!-- ========= NAVBAR ========= -->
+    <!-- ========= HEADER + NAV ========= -->
     <header class="header">
       <nav class="nav container">
-        <a href="#home" class="logo">
-          <span class="highlighted">Dan</span> Phi
-        </a>
-
-        <div class="nav-links">
-          <a href="#home" class="nav-item nav-item-active">Home</a>
-          <a href="#about" class="nav-item">About</a>
-          <a href="#skills" class="nav-item">Skills</a>
-          <a href="#projects" class="nav-item">Projects</a>
-          <a href="#contact" class="nav-item">Contact</a>
+        <div class="nav-left">
+          <a href="#home" class="logo">
+            <span class="logo-badge">DP</span>
+            <span class="logo-text">
+              <span class="logo-name">Nguyen Dinh Dan</span>
+              <span class="logo-sub">iOS Developer</span>
+            </span>
+          </a>
         </div>
 
-        <button class="toggler" aria-label="Open navigation">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
+        <div class="nav-center">
+          <div class="nav-links">
+            <a href="#home" class="nav-item nav-item-active">
+              <span class="nav-dot"></span> Home
+            </a>
+            <a href="#about" class="nav-item">
+              <span class="nav-dot"></span> About
+            </a>
+            <a href="#skills" class="nav-item">
+              <span class="nav-dot"></span> Skills
+            </a>
+            <a href="#projects" class="nav-item">
+              <span class="nav-dot"></span> Projects
+            </a>
+            <a href="#contact" class="nav-item">
+              <span class="nav-dot"></span> Contact
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-right">
+          <div class="nav-status-pill">
+            <span class="status-dot"></span>
+            <span class="status-text">
+              Available for <span class="status-highlight">iOS work</span>
+            </span>
+          </div>
+
+          <button class="toggler" aria-label="Open navigation">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+        </div>
       </nav>
     </header>
 
     <main>
-      <!-- ========= HERO (REDESIGNED) ========= -->
-      <section class="section hero" id="home">
-        <div class="container hero-inner">
-          <!-- Left: text -->
-          <div class="hero-info" data-animate="fade-left">
-            <p class="hero-kicker">HELLO, I’M</p>
-            <h1 class="title">
-              Nguyen Dinh Dan <span class="highlighted">Phi</span>
-            </h1>
+      <!-- ========= HERO ========= -->
+ <section class="section hero" id="home">
+  <div class="container hero-inner">
+    <!-- Left: text -->
+    <div class="hero-info" data-animate="fade-left">
+      <p class="hero-kicker">HELLO, I’M</p>
+      <h1 class="title">
+        Nguyen Dinh Dan <span class="highlighted">Phi</span>
+      </h1>
 
-            <p class="hero-role-line">
-              I’m a
-              <span id="typed-role" class="typed-role">Swift Enthusiast</span>
-              <span class="typed-cursor">|</span>
-            </p>
+      <p class="hero-role-line">
+        I’m a
+        <span id="typed-role" class="typed-role">Mobile Developer</span>
+        <span class="typed-cursor">|</span>
+      </p>
 
-            <p class="hero-description">
-              I build smooth, user-friendly mobile applications using
-              <a href="#skills" class="hero-link">Swift</a>,
-              <a href="#skills" class="hero-link">UIKit</a> &
-              <a href="#skills" class="hero-link">SwiftUI</a>, focusing on clean
-              architecture, performance and App Store–ready quality.
-            </p>
+      <p class="hero-description">
+        I build smooth, user-friendly mobile applications using
+        <a href="#skills" class="hero-link">Swift</a>,
+        <a href="#skills" class="hero-link">UIKit</a> &
+        <a href="#skills" class="hero-link">SwiftUI</a>, focusing on clean
+        architecture, performance and App Store–ready quality.
+      </p>
 
-            <div class="hero-chips">
-              <span class="pill-soft">
-                <i class="fa-brands fa-apple"></i> iOS &amp; iPadOS
-              </span>
-              <span class="pill-soft">
-                <i class="fa-solid fa-code"></i> Swift · SwiftUI · UIKit
-              </span>
-              <span class="pill-soft">
-                <i class="fa-solid fa-diagram-project"></i> MVVM · Patterns
-              </span>
-              <span class="pill-soft">
-                <i class="fa-solid fa-cloud-arrow-up"></i> REST · App Store
-              </span>
-            </div>
+      <div class="hero-chips">
+        <span class="pill-soft">
+          <i class="fa-brands fa-apple"></i> iOS &amp; iPadOS
+        </span>
+        <span class="pill-soft">
+          <i class="fa-solid fa-code"></i> Swift · SwiftUI · UIKit
+        </span>
+        <span class="pill-soft">
+          <i class="fa-solid fa-diagram-project"></i> MVVM · Patterns
+        </span>
+        <span class="pill-soft">
+          <i class="fa-solid fa-cloud-arrow-up"></i> REST · App Store
+        </span>
+      </div>
 
-            <div class="hero-actions">
-              <a href="#projects" class="btn btn-primary">
-                <i class="fa-solid fa-code"></i>
-                View iOS Projects
-              </a>
-              <a href="#contact" class="btn btn-outline">
-                <i class="fa-solid fa-paper-plane"></i>
-                Contact Me
-              </a>
-            </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fa-solid fa-code"></i>
+          View iOS Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fa-solid fa-paper-plane"></i>
+          Contact Me
+        </a>
+      </div>
 
-            <div class="hero-meta">
-              <div class="hero-meta-item">
-                <span class="meta-label">Experience</span>
-                <span class="meta-value">1+ year</span>
-              </div>
-              <div class="hero-meta-item">
-                <span class="meta-label">Focus</span>
-                <span class="meta-value">Swift · iOS</span>
-              </div>
-              <div class="hero-meta-item">
-                <span class="meta-label">Stack</span>
-                <span class="meta-value">UIKit · SwiftUI · MVVM</span>
-              </div>
-            </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="meta-label">Experience</span>
+          <span class="meta-value">1+ year</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="meta-label">Focus</span>
+          <span class="meta-value">Swift · iOS</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="meta-label">Stack</span>
+          <span class="meta-value">UIKit · SwiftUI · MVVM</span>
+        </div>
+      </div>
 
-            <div class="hero-socials">
-              <a
-                href="https://github.com/NguyenDinhDanPhi"
-                target="_blank"
-                aria-label="GitHub"
-              >
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/nguyen-dinh-dan-phi-95a1b9267/"
-                target="_blank"
-                aria-label="LinkedIn"
-              >
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a href="mailto:phittnh@gmail.com" aria-label="Email">
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </div>
+      <div class="hero-socials">
+        <a
+          href="https://github.com/NguyenDinhDanPhi"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/nguyen-dinh-dan-phi-95a1b9267/"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="mailto:phittnh@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: iPhone + avatar -->
+    <div class="hero-visual" data-animate="fade-right">
+      <!-- iPhone block -->
+      <div class="hero-device-block">
+        <div class="hero-device-gradient"></div>
+
+        <div class="hero-device">
+          <!-- iPhone side button -->
+          <div class="hero-device-side hero-device-side-left"></div>
+
+          <!-- notch -->
+          <div class="hero-device-notch">
+            <span class="hero-device-camera"></span>
+            <span class="hero-device-speaker"></span>
           </div>
 
-          <!-- Right: device + avatar -->
-          <div class="hero-visual" data-animate="fade-right">
-            <div class="hero-device-wrapper">
-              <div class="hero-device-shadow"></div>
-              <div class="hero-device">
-                <div class="hero-device-notch"></div>
-                <div class="hero-device-screen">
-                  <img
-                    src="./image/typemaster.jpg"
-                    alt="Typemaster – Bàn phím AI"
-                  />
-                  <div class="hero-device-overlay">
-                    <span class="device-label">Featured iOS App</span>
-                    <span class="device-title">Typemaster – Bàn phím AI</span>
-                  </div>
-                </div>
+          <!-- screen with custom UI -->
+          <div class="hero-device-screen">
+            <!-- status bar -->
+            <div class="device-status-bar">
+              <span class="device-status-time">9:41</span>
+              <span class="device-status-icons">
+                <i class="fa-solid fa-signal"></i>
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-battery-half"></i>
+              </span>
+            </div>
+
+            <!-- top app icon row -->
+            <div class="device-top-row">
+              <div class="device-app-icon">
+                <span class="device-app-swift"></span>
+              </div>
+              <div class="device-top-text">
+                <p class="device-top-title">Dan Phi · iOS Dev</p>
+                <p class="device-top-sub">Swift · UIKit · SwiftUI</p>
               </div>
             </div>
 
-            <div class="hero-avatar" data-animate="float">
-              <div class="hero-avatar-orbit"></div>
-              <div class="hero-avatar-border">
-                <img src="./image/phi.png" alt="Nguyen Dinh Dan Phi" />
+            <!-- main card: running build -->
+            <div class="device-main-card">
+              <div class="device-main-header">
+                <span class="device-main-label">BUILD #42</span>
+                <span class="device-main-env">Debug · iPhone 15</span>
               </div>
-              <div class="hero-avatar-badge">
-                <span class="badge-dot"></span>
-                <span class="badge-text">
-                  <i class="fa-solid fa-mobile-screen-button"></i>
-                  iOS Developer
+              <p class="device-main-title">Running iOS build…</p>
+              <p class="device-main-desc">
+                MVVM · Networking · App Store ready.
+              </p>
+              <div class="device-main-progress">
+                <div class="device-main-progress-bar"></div>
+              </div>
+              <div class="device-main-footer">
+                <span class="device-dot device-dot-green"></span>
+                <span class="device-main-footer-text">
+                  Tests · 32 passed · 0 failed
+                </span>
+              </div>
+            </div>
+
+            <!-- secondary cards -->
+            <div class="device-secondary">
+              <div class="device-secondary-card">
+                <span class="device-secondary-label">SwiftUI Preview</span>
+                <span class="device-secondary-value">Real-time UI</span>
+              </div>
+              <div class="device-secondary-card device-secondary-card-right">
+                <span class="device-secondary-label">Crash-free users</span>
+                <span class="device-secondary-value">99.9%</span>
+              </div>
+            </div>
+
+            <!-- log console -->
+            <div class="device-console">
+              <div class="device-console-line">
+                <span class="device-console-bullet">•</span>
+                <span class="device-console-text">
+                  Loaded <strong>HomeViewController</strong>
+                </span>
+              </div>
+              <div class="device-console-line">
+                <span class="device-console-bullet">•</span>
+                <span class="device-console-text">
+                  Connected to <strong>REST API</strong> ✓
+                </span>
+              </div>
+              <div class="device-console-line">
+                <span class="device-console-bullet">•</span>
+                <span class="device-console-text">
+                  User signed-in with <strong>Apple · Google</strong>
                 </span>
               </div>
             </div>
           </div>
         </div>
-      </section>
+
+        <div class="hero-device-reflection"></div>
+      </div>
+
+      <!-- avatar badge -->
+      <div class="hero-avatar" data-animate="float">
+        <div class="hero-avatar-orbit hero-avatar-orbit-outer"></div>
+        <div class="hero-avatar-orbit hero-avatar-orbit-inner"></div>
+        <div class="hero-avatar-border">
+          <img src="./image/phi.png" alt="Nguyen Dinh Dan Phi" />
+        </div>
+        <div class="hero-avatar-badge">
+          <span class="badge-dot"></span>
+          <span class="badge-text">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            iOS Developer
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <!-- ========= ABOUT ========= -->
       <section class="section" id="about">
